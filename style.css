@@ -34,6 +34,7 @@ body {
   min-height: 100vh;
   padding: 0 5px;
   margin: auto;
+  position: relative;
 }
 
 /* NAVBAR */
@@ -103,4 +104,68 @@ body {
 
 .logo img {
   height: 1.375rem;
+}
+
+/* MOBILE DEVICES */
+@media (max-width: 768px) {
+  .navbar {
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+
+  .nav-first,
+  .nav-second {
+    gap: 30px;
+    padding-bottom: 10px;
+  }
+
+  .nav-first .menu-icon {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: var(--white);
+    top: 0;
+    left: -5px;
+    max-width: 220px;
+    width: 100%;
+    height: 100vh;
+    align-items: start;
+    z-index: 15;
+    padding: 25px 30px;
+  }
+
+  .nav-first .backdrop.active {
+    background: var(--black-with-opacity);
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -5px;
+    z-index: 14;
+  }
+
+  .nav-links.active .close-icon {
+    display: inline-block;
+    margin-bottom: 30px;
+    cursor: pointer;
+  }
+
+  .nav-links.active a {
+    font-weight: 700;
+    color: var(--black);
+  }
+
+  .nav-links.active a:hover::after {
+    bottom: -5px;
+  }
 }
