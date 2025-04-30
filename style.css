@@ -106,8 +106,78 @@ body {
   height: 1.375rem;
 }
 
+/* MAIN */
+.main {
+  display: flex;
+  gap: 125px;
+  min-height: 570px;
+  align-items: center;
+  padding: 0 50px;
+}
+
+/* IMAGE GALLERY */
+.gallery {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.gallery .main-img img {
+  display: none;
+}
+
+.gallery .main-img img.active {
+  display: inline-block;
+  max-width: 445px;
+  max-height: 445px;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.gallery .thumb-list {
+  display: flex;
+  justify-content: space-between;
+  max-width: 445px;
+  width: 100%;
+}
+
+.gallery .thumb-list div {
+  max-width: 90px;
+  max-height: 90px;
+  margin: 0 2px;
+}
+
+.gallery .thumb-list img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.gallery .thumb-list img:hover {
+  opacity: 50%;
+}
+
+.gallery .thumb-list .active img {
+  opacity: 30%;
+}
+
+.gallery .thumb-list .active {
+  border: 2px solid var(--orange);
+  border-radius: 13px;
+  margin: 0;
+}
+
+/* CONTENT */
+.content {
+  flex: 1;
+}
+
 /* MOBILE DEVICES */
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   .navbar {
     margin-bottom: 0;
     border-bottom: none;
@@ -115,8 +185,8 @@ body {
 
   .nav-first,
   .nav-second {
-    gap: 30px;
-    padding-bottom: 10px;
+    gap: 1.875rem;
+    padding-bottom: 0.625rem;
   }
 
   .nav-first .menu-icon {
@@ -135,12 +205,12 @@ body {
     background: var(--white);
     top: 0;
     left: -5px;
-    max-width: 220px;
+    max-width: 13.75rem;
     width: 100%;
     height: 100vh;
     align-items: start;
     z-index: 15;
-    padding: 25px 30px;
+    padding: 1.5625rem 1.875rem;
   }
 
   .nav-first .backdrop.active {
@@ -156,7 +226,7 @@ body {
 
   .nav-links.active .close-icon {
     display: inline-block;
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
     cursor: pointer;
   }
 
