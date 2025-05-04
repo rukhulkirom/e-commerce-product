@@ -480,6 +480,29 @@ body {
   font-weight: 700;
 }
 
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  color: var(--dark-grayish-blue);
+}
+
+.cart-item img {
+  height: 3.125rem;
+  border-radius: 5px;
+}
+
+.cart-item .total-price {
+  color: var(--black);
+  font-weight: 700;
+}
+
+.delete-item {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
 /* RESPONSIVE */
 @media (max-width: 48rem) {
   .main {
